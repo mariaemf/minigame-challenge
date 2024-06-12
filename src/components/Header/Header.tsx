@@ -6,7 +6,7 @@ import {
   PlayerInformation,
   WrapperHeader,
 } from "./styled";
-import profile from "../../assets/profile.png";
+import profile from "../../assets/profile.webp";
 import { FaMedal } from "react-icons/fa";
 
 function Header() {
@@ -16,7 +16,7 @@ function Header() {
         <Containerimg src={profile} alt="foto de perfil" />
 
         <PlayerInformation>
-          <h1>Mario Freitas</h1>
+          <h1>Mateus Souza</h1>
           <Level>
             <p>nivel ouro</p>
             <i>

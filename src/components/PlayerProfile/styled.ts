@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const WrapperAboutThePlayer = styled.div`
-  width: 300px;
+  width: 400px;
   height: 600px;
   padding: 20px;
   background-color: #333;
@@ -15,6 +15,7 @@ export const WrapperAboutThePlayer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
 `;
 
 export const ContainerLogo = styled.div`
@@ -30,28 +31,44 @@ export const PlayOnlineButton = styled.button`
   align-items: center;
   justify-content: center;
 
-  width: 250px;
+  width: 300px;
   height: 32px;
   border: none;
+  border-radius: 4px;
 
   background: #ffc046;
   color: #000;
   font-size: 16px;
   font-weight: 400;
-`;
 
+  transition: 0.3s ease, border 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    background: transparent;
+    color: #fff;
+    border: 1px solid #ffc046;
+  }
+`;
 export const SocialNetworksButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 14px;
 
-  width: 250px;
+  gap: 14px;
+  width: 300px;
   height: 32px;
-  margin-top: 16px;
+  margin-top: 4rem;
+  border-radius: 4px;
 
   border: 1px solid #ffc046;
   background: transparent;
 `;
 
-export const DescriptionToFollow = styled.div``;
+export const DescriptionToFollow = styled.div`
+  font-size: 8px;
+  letter-spacing: 6px;
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+`;

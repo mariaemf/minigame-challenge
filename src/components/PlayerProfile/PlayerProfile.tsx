@@ -10,28 +10,32 @@ import { FaTwitter, FaDiscord, FaFacebook } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
 import { TiSocialYoutube } from "react-icons/ti";
 
-function AboutThePlayer() {
+function PlayerProfile() {
   return (
     <WrapperAboutThePlayer>
-      <ContainerLogo>
-        <img src={logo} alt="" />
-      </ContainerLogo>
+      <div>
+        <ContainerLogo>
+          <img src={logo} alt="" />
+        </ContainerLogo>
 
-      <PlayOnlineButton>C O N E C T A R </PlayOnlineButton>
+        <PlayOnlineButton>C O N E C T A R </PlayOnlineButton>
+      </div>
 
-      <SocialNetworksButton>
-        <FaTwitter color="#fff" size={20} />
-        <RiInstagramFill color="#fff" size={20} />
-        <TiSocialYoutube color="#fff" size={20} />
-        <FaDiscord color="#fff" size={20} />
-        <FaFacebook color="#fff" size={20} />
-      </SocialNetworksButton>
+      <div>
+        <SocialNetworksButton>
+          <FaTwitter color="#fff" size={20} />
+          <RiInstagramFill color="#fff" size={20} />
+          <TiSocialYoutube color="#fff" size={20} />
+          <FaDiscord color="#fff" size={20} />
+          <FaFacebook color="#fff" size={20} />
+        </SocialNetworksButton>
 
-      <DescriptionToFollow>
-        <p>SIGA NAS REDES SOCIAIS </p>
-      </DescriptionToFollow>
+        <DescriptionToFollow>
+          <p>SIGA NAS REDES SOCIAIS </p>
+        </DescriptionToFollow>
+      </div>
     </WrapperAboutThePlayer>
   );
 }
 
-export default AboutThePlayer;
+export default PlayerProfile;

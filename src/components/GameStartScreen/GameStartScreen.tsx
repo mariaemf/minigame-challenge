@@ -22,13 +22,13 @@ import {
   ModalLogoHeader,
   PlayMinigameButton,
   RankingContainer,
+  RankingTitleMiniGame,
   RankingWrapper,
   WrapperGameStartScreen,
 } from "./styled";
 import logo from "../../assets/logo.svg";
 import { Fragment } from "react/jsx-runtime";
-import successSound from "./sounds/success.mp3";
-
+import { FaArrowTurnDown } from "react-icons/fa6";
 
 function GameStartScreen() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -75,6 +75,13 @@ function GameStartScreen() {
       <div>
         <Box>
           <RankingWrapper>
+            <RankingTitleMiniGame>
+              Seu histórico em Mini Game
+              <i>
+                <FaArrowTurnDown />
+              </i>
+            </RankingTitleMiniGame>
+
             {gameHistory.slice(-5).map((game, index) => (
               <RankingContainer key={index}>
                 <Text>{game.date.toLocaleString()}</Text>
@@ -183,7 +190,6 @@ function GameStartScreen() {
                       _hover={{ bg: "#ffb100" }}
                       onClick={() => {
                         startGame();
-                        // playSuccess();
                       }}
                     >
                       Jogar novamente

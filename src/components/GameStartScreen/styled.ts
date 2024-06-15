@@ -30,20 +30,21 @@ export const PlayMinigameButton = styled.button`
   font-weight: 400;
   letter-spacing: 2px;
 
-  color: #fff;
+  color: #000;
   background: #ffc046;
   transition: 0.3s ease, border 0.3s ease;
   cursor: pointer;
 
   &:hover {
     background: transparent;
+    color: #fff;
     border: 1px solid #ffc046;
   }
 `;
 
 export const DescriptionText = styled.span`
   display: flex;
-  width: 220px;
+  width: 350px;
   margin-top: 32px;
   font-size: 16px;
   letter-spacing: 4px;
@@ -117,7 +118,21 @@ export const RankingWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 4rem;
+
+  margin-top: 32px;
+`;
+
+export const RankingTitleMiniGame = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 32px;
+  color: #ffc046;
+  letter-spacing: 2px;
+
+  i {
+    margin-top: 12px;
+  }
 `;
 
 export const RankingContainer = styled.div`
@@ -129,4 +144,9 @@ export const ModalLogoHeader = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 12px;
+`;
+
+export const WrapperSubTitle = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 `;

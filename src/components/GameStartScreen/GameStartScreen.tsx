@@ -1,4 +1,5 @@
 import {
+  Badge,
   Box,
   Button,
   HStack,
@@ -19,6 +20,7 @@ import {
   CharacterCard,
   CharacterDescription,
   DescriptionText,
+  GameHistoryContainer,
   ModalLogoHeader,
   PlayMinigameButton,
   RankingContainer,
@@ -29,6 +31,14 @@ import {
 import logo from "../../assets/logo.svg";
 import { Fragment } from "react/jsx-runtime";
 import { FaArrowTurnDown } from "react-icons/fa6";
+import successSound from "../../assets/success.mp3";
+import failSound from "../../assets/error.mp3";
+import { useEffect } from "react";
+
+const playSound = (soundFile) => {
+  const audio = new Audio(soundFile);
+  audio.play();
+};
 
 function GameStartScreen() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -41,6 +51,23 @@ function GameStartScreen() {
     handleUserInput,
     gameHistory,
   } = useMiniGame();
+
+  useEffect(() => {
+    if (gameResult === true) {
+      playSound(successSound);
+    } else if (gameResult === false) {
+      playSound(failSound);
+    }
+  }, [gameResult]);
+
+  const formatDate = (date) =>
+    new Date(date).toLocaleString("pt-BR", {
+      day: "2-digit",
+      month: "2-digit",
+      year: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit",
+    });
 
   return (
     <WrapperGameStartScreen>
@@ -69,7 +96,7 @@ function GameStartScreen() {
               <span>12/06/2024</span>
             </div>
           </CharacterDescription>
-        </CharacterCard>{" "}
+        </CharacterCard>
       </div>
 
       <div>
@@ -81,14 +108,21 @@ function GameStartScreen() {
                 <FaArrowTurnDown />
               </i>
             </RankingTitleMiniGame>
+            <GameHistoryContainer>
+              {gameHistory.map((game, index) => (
+                <RankingContainer key={index}>
+                  <Text>{formatDate(game.date)}</Text>
+                  <HStack>
+                    <Text>Resultado:</Text>
+                    <Badge colorScheme={game.success ? "green" : "red"}>
+                      {game.success ? "Vitória" : "Derrota"}
+                    </Badge>
+                  </HStack>
 
-            {gameHistory.slice(-5).map((game, index) => (
-              <RankingContainer key={index}>
-                <Text>{game.date.toLocaleString()}</Text>
-                <Text>Resultado: {game.success ? "Sucesso" : "Falha"}</Text>
-                <Text>Sequência: {game.sequence.join(" ")}</Text>
-              </RankingContainer>
-            ))}
+                  <Text>Sequência: {game.sequence.join(" ")}</Text>
+                </RankingContainer>
+              ))}
+            </GameHistoryContainer>
           </RankingWrapper>
 
           <Modal isOpen={isOpen} onClose={onClose} isCentered>

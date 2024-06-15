@@ -4,21 +4,21 @@ import {
   GetOutButton,
   Level,
   PlayerInformation,
-  WrapperHeader,
+  HeaderWrapper,
 } from "./styled";
 import profile from "../../assets/profile.webp";
 import { FaMedal } from "react-icons/fa";
 
 function Header() {
   return (
-    <WrapperHeader>
+    <HeaderWrapper>
       <ContainerPlayerProfile>
-        <Containerimg src={profile} alt="foto de perfil" />
+        <Containerimg src={profile} alt="foto de perfil do usuário" />
 
         <PlayerInformation>
           <h1>Mateus Souza</h1>
           <Level>
-            <p>nivel ouro</p>
+            <p>Nível Gold</p>
             <i>
               <FaMedal size={14} color="#ffc046" />
             </i>
@@ -26,7 +26,7 @@ function Header() {
         </PlayerInformation>
       </ContainerPlayerProfile>
       <GetOutButton>Sair</GetOutButton>
-    </WrapperHeader>
+    </HeaderWrapper>
   );
 }
 

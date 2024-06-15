@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const WrapperHeader = styled.div`
+export const HeaderWrapper = styled.div`
   width: 100%;
   height: 120px;
   border-bottom-left-radius: 12px;

@@ -134,7 +134,10 @@ export const RankingTitleMiniGame = styled.div`
     margin-top: 12px;
   }
 `;
-
+export const GameHistoryContainer = styled.div`
+  max-height: 400px;
+  overflow-y: auto;
+`;
 export const RankingContainer = styled.div`
   border-bottom: 1px solid #ffc046;
   padding: 10px;

@@ -17,16 +17,16 @@ import {
 } from "@chakra-ui/react";
 import { useMiniGame } from "../../atoms/useMiniGameStore";
 import {
-  CharacterCard,
-  CharacterDescription,
-  DescriptionText,
-  GameHistoryContainer,
+  CharacterInfoCard,
+  CharacterDetails,
+  CharactersTitle,
+  GameHistoryList,
   ModalLogoHeader,
-  PlayMinigameButton,
-  RankingContainer,
-  RankingTitleMiniGame,
-  RankingWrapper,
-  WrapperGameStartScreen,
+  StartMinigameButton,
+  GameHistoryItem,
+  MiniGameHistoryTitle,
+  GameHistoryWrapper,
+  GameStartScreenWrapper,
 } from "./styled";
 import logo from "../../assets/logo.svg";
 import { Fragment } from "react/jsx-runtime";
@@ -70,19 +70,19 @@ function GameStartScreen() {
     });
 
   return (
-    <WrapperGameStartScreen>
+    <GameStartScreenWrapper>
       <div>
-        <PlayMinigameButton
+        <StartMinigameButton
           onClick={() => {
             startGame();
             onOpen();
           }}
         >
           Iniciar Mini-Game
-        </PlayMinigameButton>
-        <DescriptionText>Seus personagens</DescriptionText>
-        <CharacterCard>
-          <CharacterDescription>
+        </StartMinigameButton>
+        <CharactersTitle>Seus personagens</CharactersTitle>
+        <CharacterInfoCard>
+          <CharacterDetails>
             <div>
               <p> Personagem: </p>
               <span>Drake Ramone</span>
@@ -95,22 +95,22 @@ function GameStartScreen() {
               <p>Ultima partida:</p>
               <span>12/06/2024</span>
             </div>
-          </CharacterDescription>
-        </CharacterCard>
+          </CharacterDetails>
+        </CharacterInfoCard>
       </div>
 
       <div>
         <Box>
-          <RankingWrapper>
-            <RankingTitleMiniGame>
+          <GameHistoryWrapper>
+            <MiniGameHistoryTitle>
               Seu histórico em Mini Game
               <i>
                 <FaArrowTurnDown />
               </i>
-            </RankingTitleMiniGame>
-            <GameHistoryContainer>
+            </MiniGameHistoryTitle>
+            <GameHistoryList>
               {gameHistory.map((game, index) => (
-                <RankingContainer key={index}>
+                <GameHistoryItem key={index}>
                   <Text>{formatDate(game.date)}</Text>
                   <HStack>
                     <Text>Resultado:</Text>
@@ -120,10 +120,10 @@ function GameStartScreen() {
                   </HStack>
 
                   <Text>Sequência: {game.sequence.join(" ")}</Text>
-                </RankingContainer>
+                </GameHistoryItem>
               ))}
-            </GameHistoryContainer>
-          </RankingWrapper>
+            </GameHistoryList>
+          </GameHistoryWrapper>
 
           <Modal isOpen={isOpen} onClose={onClose} isCentered>
             <ModalOverlay />
@@ -235,7 +235,7 @@ function GameStartScreen() {
           </Modal>
         </Box>
       </div>
-    </WrapperGameStartScreen>
+    </GameStartScreenWrapper>
   );
 }
 

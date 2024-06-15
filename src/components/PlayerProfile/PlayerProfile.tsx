@@ -1,9 +1,9 @@
 import {
-  ContainerLogo,
-  DescriptionToFollow,
-  PlayOnlineButton,
-  SocialNetworksButton,
-  WrapperAboutThePlayer,
+  LogoContainer,
+  FollowDescription,
+  ConnectButton,
+  SocialMediaButtons,
+  PlayerDetailsWrapper,
 } from "./styled";
 import logo from "../../assets/logo.svg";
 import { FaTwitter, FaDiscord, FaFacebook } from "react-icons/fa";
@@ -12,29 +12,29 @@ import { TiSocialYoutube } from "react-icons/ti";
 
 function PlayerProfile() {
   return (
-    <WrapperAboutThePlayer>
+    <PlayerDetailsWrapper>
       <div>
-        <ContainerLogo>
+        <LogoContainer>
           <img src={logo} alt="" />
-        </ContainerLogo>
+        </LogoContainer>
 
-        <PlayOnlineButton>C O N E C T A R </PlayOnlineButton>
+        <ConnectButton>C O N E C T A R </ConnectButton>
       </div>
 
       <div>
-        <SocialNetworksButton>
+        <SocialMediaButtons>
           <FaTwitter color="#fff" size={20} />
           <RiInstagramFill color="#fff" size={20} />
           <TiSocialYoutube color="#fff" size={20} />
           <FaDiscord color="#fff" size={20} />
           <FaFacebook color="#fff" size={20} />
-        </SocialNetworksButton>
+        </SocialMediaButtons>
 
-        <DescriptionToFollow>
+        <FollowDescription>
           <p>SIGA NAS REDES SOCIAIS </p>
-        </DescriptionToFollow>
+        </FollowDescription>
       </div>
-    </WrapperAboutThePlayer>
+    </PlayerDetailsWrapper>
   );
 }
 

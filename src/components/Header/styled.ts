@@ -16,19 +16,19 @@ export const HeaderWrapper = styled.div`
   color: #fff;
 `;
 
-export const ContainerPlayerProfile = styled.div`
+export const PlayerProfileContainer = styled.div`
   display: flex;
   gap: 24px;
 `;
 
-export const Containerimg = styled.img`
+export const ProfileImage = styled.img`
   width: 70px;
   height: 70px;
   border-radius: 50%;
   object-fit: cover;
 `;
 
-export const PlayerInformation = styled.div`
+export const PlayerInfo = styled.div`
   align-items: center;
   margin-top: 14px;
   color: #bcbcbc;
@@ -42,13 +42,13 @@ export const PlayerInformation = styled.div`
   }
 `;
 
-export const Level = styled.div`
+export const PlayerLevel = styled.div`
   display: flex;
   align-items: center;
   margin: 4px 6px;
   gap: 4px;
 `;
-export const GetOutButton = styled.button`
+export const LogoutButton = styled.button`
   width: 140px;
   height: 42px;
 

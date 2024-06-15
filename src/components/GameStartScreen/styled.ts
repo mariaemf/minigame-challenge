@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import backgroundImage from "../../assets/profile.webp";
 
-export const WrapperGameStartScreen = styled.div`
+export const GameStartScreenWrapper = styled.div`
   width: 800px;
   height: 600px;
   padding: 20px;
@@ -16,7 +16,7 @@ export const WrapperGameStartScreen = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
 `;
-export const PlayMinigameButton = styled.button`
+export const StartMinigameButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -42,7 +42,7 @@ export const PlayMinigameButton = styled.button`
   }
 `;
 
-export const DescriptionText = styled.span`
+export const CharactersTitle = styled.span`
   display: flex;
   width: 350px;
   margin-top: 32px;
@@ -52,7 +52,7 @@ export const DescriptionText = styled.span`
   border-bottom: 1px solid #ffc046;
 `;
 
-export const CharacterCard = styled.div`
+export const CharacterInfoCard = styled.div`
   position: relative;
   margin-top: 24px;
   border-radius: 8px;
@@ -83,7 +83,7 @@ export const CharacterCard = styled.div`
   }
 `;
 
-export const CharacterDescription = styled.div`
+export const CharacterDetails = styled.div`
   position: absolute;
   bottom: 0;
   left: 0;
@@ -114,7 +114,7 @@ export const CharacterDescription = styled.div`
   }
 `;
 
-export const RankingWrapper = styled.div`
+export const GameHistoryWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -122,7 +122,7 @@ export const RankingWrapper = styled.div`
   margin-top: 32px;
 `;
 
-export const RankingTitleMiniGame = styled.div`
+export const MiniGameHistoryTitle = styled.div`
   display: flex;
   align-items: center;
   gap: 24px;
@@ -134,11 +134,11 @@ export const RankingTitleMiniGame = styled.div`
     margin-top: 12px;
   }
 `;
-export const GameHistoryContainer = styled.div`
+export const GameHistoryList = styled.div`
   max-height: 400px;
   overflow-y: auto;
 `;
-export const RankingContainer = styled.div`
+export const GameHistoryItem = styled.div`
   border-bottom: 1px solid #ffc046;
   padding: 10px;
 `;

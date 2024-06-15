@@ -13,8 +13,9 @@ export const WrapperGameStartScreen = styled.div`
   overflow: hidden;
   margin-left: 12px;
   margin-top: 64px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 `;
-
 export const PlayMinigameButton = styled.button`
   display: flex;
   align-items: center;
@@ -57,7 +58,7 @@ export const CharacterCard = styled.div`
   width: 350px;
   height: 400px;
   padding: 16px;
-  overflow: hidden; /* Para garantir que o conteúdo do pseudo-elemento não vaze */
+  overflow: hidden;
   background-image: url(${backgroundImage});
   background-size: cover;
   background-position: center;
@@ -71,8 +72,8 @@ export const CharacterCard = styled.div`
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.3); /* Leve sombra sobre a imagem */
-    z-index: 1; /* Coloca a sombra sobre a imagem */
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
   }
 
   > * {
@@ -110,4 +111,22 @@ export const CharacterDescription = styled.div`
     color: #ffc046;
     letter-spacing: 2px;
   }
+`;
+
+export const RankingWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 4rem;
+`;
+
+export const RankingContainer = styled.div`
+  border-bottom: 1px solid #ffc046;
+  padding: 10px;
+`;
+
+export const ModalLogoHeader = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
 `;

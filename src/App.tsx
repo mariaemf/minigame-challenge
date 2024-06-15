@@ -6,14 +6,14 @@ import PlayerProfile from "./components/PlayerProfile/PlayerProfile";
 
 function App() {
   return (
-    <div>
+    <>
       <Header />
 
       <WrapperComponents>
         <PlayerProfile />
         <GameStartScreen />
       </WrapperComponents>
-    </div>
+    </>
   );
 }
 

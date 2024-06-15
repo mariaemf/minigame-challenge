@@ -10,7 +10,7 @@ export const WrapperAboutThePlayer = styled.div`
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   position: relative;
   overflow: hidden;
-  margin-left: 18rem;
+  /* margin-left: 18rem; */
   margin-top: 64px;
   display: flex;
   flex-direction: column;

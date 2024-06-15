@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const WrapperHeader = styled.div`
   width: 100%;
-  height: 100px;
+  height: 120px;
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
 
@@ -50,7 +50,7 @@ export const Level = styled.div`
 `;
 export const GetOutButton = styled.button`
   width: 140px;
-  height: 32px;
+  height: 42px;
 
   border-radius: 8px;
   border: 1px solid #ffc046;

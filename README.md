@@ -4,7 +4,7 @@
 O Mini-Game Challenge é um projeto desenvolvido como parte de um teste, que consiste em uma aplicação web interativa para desafiar a agilidade e precisão dos jogadores. A aplicação foi desenvolvida utilizando ReactJS com Chakra UI, Styled Components, Framer Motion, Jotai, e React Icons, e implementando responsividade para diferentes dispositivos.
 
 # Extra 
-o site esta online na web este e o endereco para acesso:  
+o site esta online na web este e o endereco para acesso: https://mini-gamechallenge.netlify.app/
 
 # Descrição:
 Este ticket documenta a implementação do Mini-Game Challenge, um minigame interativo desenvolvido em ReactJS, projetado para desafiar a agilidade e precisão dos jogadores. O jogo inclui funcionalidades básicas e algumas características extras opcionais para melhorar a experiência do usuário.

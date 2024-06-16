@@ -35,7 +35,7 @@ import successSound from "../../assets/success.mp3";
 import failSound from "../../assets/error.mp3";
 import { useEffect } from "react";
 
-const playSound = (soundFile) => {
+const playSound = (soundFile: string): void => {
   const audio = new Audio(soundFile);
   audio.play();
 };
@@ -60,7 +60,7 @@ function GameStartScreen() {
     }
   }, [gameResult]);
 
-  const formatDate = (date) =>
+  const formatDate = (date: string | number | Date): string =>
     new Date(date).toLocaleString("pt-BR", {
       day: "2-digit",
       month: "2-digit",

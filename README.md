@@ -11,8 +11,7 @@ Este ticket documenta a implementação do Mini-Game Challenge, um minigame inte
 
 # Detalhes Técnicos:
 
-* ReactJS: Utilizado para a construção da interface do usuário.
-* TypeScript: 
+* ReactJS e TypeScript: Utilizados para a construção da interface do usuário, garantindo tipagem estática e maior segurança no código.
 * Chakra UI: Para componentes de interface de usuário acessíveis e flexíveis.
 * Styled Components: Para estilização de componentes com CSS-in-JS.
 * Framer Motion: Para criar animações suaves e complexas.

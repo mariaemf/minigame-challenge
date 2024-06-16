@@ -1,31 +1,30 @@
-# React + TypeScript + Vite
+# Mini-Game Challenge
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Visão Geral
+O Mini-Game Challenge é um projeto desenvolvido como parte de um teste, que consiste em uma aplicação web interativa para desafiar a agilidade e precisão dos jogadores. A aplicação foi desenvolvida utilizando ReactJS com Chakra UI, Styled Components, Framer Motion, Jotai, e React Icons, e implementando responsividade para diferentes dispositivos.
 
-Currently, two official plugins are available:
+# Extra 
+o site esta online na web este e o endereco para acesso:  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Descrição:
+Este ticket documenta a implementação do Mini-Game Challenge, um minigame interativo desenvolvido em ReactJS, projetado para desafiar a agilidade e precisão dos jogadores. O jogo inclui funcionalidades básicas e algumas características extras opcionais para melhorar a experiência do usuário.
 
-## Expanding the ESLint configuration
+# Detalhes Técnicos:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+* ReactJS e TypeScript: Utilizados para a construção da interface do usuário, garantindo tipagem estática e maior segurança no código.
+* Chakra UI: Para componentes de interface de usuário acessíveis e flexíveis.
+* Styled Components: Para estilização de componentes com CSS-in-JS.
+* Framer Motion: Para criar animações suaves e complexas.
+* Jotai: Para gerenciamento de estado global.
+* React Icons: Para a utilização de ícones populares no projeto.
 
-- Configure the top-level `parserOptions` property like this:
+# Descrição do Funcionamento:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
-# minigame-challenge
+* Início do Jogo: O jogador clica no botão "Iniciar Mini-Game" para começar o jogo.
+* Sequência de Teclas: Uma sequência aleatória de teclas é gerada e exibida ao jogador.
+* Pressionamento de Teclas: O jogador deve pressionar as teclas na ordem correta dentro do tempo limite indicado.
+* Feedback Visual: Se a tecla pressionada estiver correta, a próxima tecla da sequência é destacada.
+* Fim do Jogo: O jogo termina se o jogador pressionar uma tecla errada ou se o tempo se esgotar, exibindo uma notificação.
+* Reiniciar Jogo: O jogador pode reiniciar o jogo a qualquer momento utilizando o botão de reiniciar.
+* Ranking Local: As melhores pontuações são armazenadas e exibidas em um ranking local.
+* Animações e Efeitos Sonoros: Animações e efeitos sonoros são utilizados para tornar a experiência do jogo mais intuitiva e agradável.
